@@ -1,0 +1,80 @@
+127.0.0.1:6379> PING
+PONG
+127.0.0.1:6379> SADD STU_DETAILS: name abi ram ravi
+(integer) 4
+127.0.0.1:6379> SADD STU_DETAILS: regno 1 2 3
+(integer) 4
+127.0.0.1:6379> SADD STU_DETAILS: dept IT CSE BME
+(integer) 4
+127.0.0.1:6379> SADD STAFF_DETAILS: name anu sri abi
+(integer) 4
+127.0.0.1:6379> SADD STAFF_DETAILS: id 23 34 45
+(integer) 4
+127.0.0.1:6379> SADD STAFF_DETAILS: department IT IT CSE
+(integer) 3
+127.0.0.1:6379> SADD STAFF_DETAILS: position AP HOD P
+(integer) 4
+127.0.0.1:6379> SADD STAFF_DETAILS:salary 30000 50000 40000
+(integer) 3
+127.0.0.1:6379> SADD STU_MARKS: regno 1 2 3
+(integer) 4
+127.0.0.1:6379> SADD STU_MARKS: m1 90 80 70
+(integer) 4
+127.0.0.1:6379> SADD STU_MARKS: m2 90 70 45
+(integer) 2
+127.0.0.1:6379> SADD STU_MARKS:  cgpa 9.2 8.9 7.3
+(integer) 4
+127.0.0.1:6379> SMEMBERS STU_DETAILS
+1)"name”
+2) "abi"
+3) "ram"
+4) "ravi"
+5) "regno"
+6) "1"
+7) "2"
+8) "3"
+9) "dept"
+10) "IT"
+11) “CSE"
+12) "BME"
+127.0.0.1:6379> SMEMBERS STAFF_DETAILS
+1)"123"
+2) "name"
+3) "anu"
+4) "sri"
+5) "abi"
+6) "id"
+7) "23"
+8) "34"
+9) "45"
+10) "department"
+11) "IT"
+12) "IT"
+13) "CSE"
+14) "position"
+15) "AP"
+16) "HOD"
+17) "P"
+18) "salary"
+19) "30000"
+20) "50000"
+21) "40000"
+127.0.0.1:6379> SMEMBERS STU_MARKS
+1)"regno"
+2) "1"
+3) "2"
+4) "3"
+5) "m1"
+6) "90"
+7) "80"
+8) "70"
+9) "m2"
+10) "90"
+11) "70"
+12) "45"
+13) "cgpa"
+14) "9.2"
+15) "8.9"
+16) "7.3"
+127.0.0.1:6379> SAVE
+OK
